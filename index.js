@@ -1,6 +1,12 @@
 const express = require('express')
-const app = express()
+const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const app = express()
+
+morgan.token('body', function (req, res) { return JSON.stringify(req.body) })
+
+app.use(morgan(':method :url :body :status :res[content-length] - :response-time ms'))
+
 
 app.use(bodyParser.json())
 
@@ -42,7 +48,6 @@ app.get("/api/persons/:id", (request, response) => {
 
 app.post("/api/persons", (request, response) => {
     const id = Math.floor(Math.random() * Math.floor(60000));
-    console.log(request.body)
     const body = request.body
     
     if (body.name === undefined) {
