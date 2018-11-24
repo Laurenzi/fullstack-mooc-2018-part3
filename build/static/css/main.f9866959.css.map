@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,SACI,uBACA,YAAc,CAGlB,OACI,qBACA,YAAc","file":"static/css/main.f9866959.css","sourcesContent":[".message {\n    background-color: green;\n    padding: 20px;\n}\n\n.error {\n    background-color: red;\n    padding: 20px;\n}\n\n\n// WEBPACK FOOTER //\n// ./src/index.css"],"sourceRoot":""}
